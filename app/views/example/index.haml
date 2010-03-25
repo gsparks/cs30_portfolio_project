@@ -105,6 +105,9 @@
             %h5 git reset --hard
             %p Your panic button destroy all uncommited changes (make sure to run git add -A first though)
 
+            %h5 git remote add [repository-name] [repository-url]
+            %p Create a new remote location that can be referenced by the [repository-name]
+
 
 
         .three.columns
@@ -129,6 +132,55 @@
 
             %h5 touch [file]
             %p create specified file
+
+
+    %h2 How to do stuff in your database
+
+    .row
+        .four.columns.first
+            %h4 Basic
+
+            %h5 @posts = Post.all
+            %p find all the posts in the database - comes back as an array
+
+            %h5 @posts = Post.first
+            %p find the first post in the database
+
+            %h5 @post = Post.last
+            %p hmm wonder what this does?
+
+            %h5 @post = Post.find( 1 )
+            %p find the post with the specified id - ex 1 in this case
+
+            %h5 @post = Post.find(params[:id])
+            %p find the post from id specified in the request url ex http://localhost:3000/posts/1
+
+            %h5 @post = Post.new(:title => "hi", :body => "foo")
+            %p make a new post in memory
+
+            %h5 @post.save
+            %p save a post that you have already made in memory
+
+
+            %h5 @post.destroy
+            %p delete the post
+
+        .four.columns
+            %h4 Intermediate
+
+            %h5 @posts = Post.all(:order => 'created_at DESC')
+            %p
+                Find all the posts and order them by the time they were created (most recent first) - for the opposite order use ASC instead of DESC
+
+
+            %h5 @posts = Post.all( :conditions => { :title => 'some title' } )
+            %p Find the posts whose title equals 'some title'
+
+            %h5 @posts = Post.all( :conditions => [ 'created_at < ? AND updated_at < ?', Date.today, Date.today ] )
+            %p
+                Find all the posts that were created before today and have not been updated today -
+                Alternate syntax for conditions that allows you to use comparisons and logical operations (AND, OR)
+
 
     %h2 Buttons
     .row
