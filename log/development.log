@@ -1069,3 +1069,303 @@ Rendering template within layouts/application
 Rendering pages/_home
 Rendered pages/_home (1.0ms)
 Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 20:04:18) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (6.0ms)
+Completed in 64ms (View: 62, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 20:08:06) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (6.0ms)
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:08:10) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (4.0ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:08:13) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (2.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:29:32) [GET]
+
+NameError (undefined local variable or method `layout' for #<PagesController:0x30eb140>):
+  app/controllers/pages_controller.rb:6:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:29:45) [GET]
+
+NameError (undefined local variable or method `layout' for #<PagesController:0x568dec0>):
+  app/controllers/pages_controller.rb:6:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:29:47) [GET]
+Rendered pages/_home (6.0ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:29:55) [GET]
+Rendered pages/_home (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 20:29:56) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (1.0ms)
+Completed in 60ms (View: 58, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 20:30:07) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (9.0ms)
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 20:30:09) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (5.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 20:30:10) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (6.0ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 20:32:40) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 20:39:44) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 20:40:06) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 20:46:01) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 20:46:04) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (2.0ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 20:46:08) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (5.0ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-20 20:46:12) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (4.0ms)
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m

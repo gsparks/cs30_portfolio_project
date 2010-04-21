@@ -3,27 +3,23 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="73e01a3f-bd3f-412d-988d-2929a3b176d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/_cs10.haml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/philosophy_paragraph.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/_home.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/index.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_home.haml" afterPath="$PROJECT_DIR$/app/views/pages/_home.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_resume.haml" afterPath="$PROJECT_DIR$/app/views/pages/_resume.haml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/Desert.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/compiled/global.css" afterPath="$PROJECT_DIR$/public/stylesheets/compiled/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheets/partials/_typography.sass" afterPath="$PROJECT_DIR$/app/stylesheets/partials/_typography.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_cs30.haml" afterPath="$PROJECT_DIR$/app/views/pages/_cs30.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/permutation_screenshot.PNG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheets/partials/_typography.sass" afterPath="$PROJECT_DIR$/app/stylesheets/partials/_typography.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/scheme_screenshot.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/_cs30.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/_cs50.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheets/global.sass" afterPath="$PROJECT_DIR$/app/stylesheets/global.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_cs10.haml" afterPath="$PROJECT_DIR$/app/views/pages/_cs10.haml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/kayak.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cs30_portfolio_project.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/_resume.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_cs50.haml" afterPath="$PROJECT_DIR$/app/views/pages/_cs50.haml" />
     </list>
     <ignored path="cs30_portfolio_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,60 +43,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_flash.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_flash.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_grid.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_grid.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_labels.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_labels.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="32" selection-start="110" selection-end="110" vertical-scroll-proportion="28.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_mixins.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_mixins.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="41" selection-start="1761" selection-end="1761" vertical-scroll-proportion="-15.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_reset.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_reset.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_colors.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_colors.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_buttons.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_buttons.sass">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,10 +70,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pages_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="4" selection-start="163" selection-end="163" vertical-scroll-proportion="1.0417827">
+            <state line="6" column="28" selection-start="81" selection-end="81" vertical-scroll-proportion="-4.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_cs10.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/_cs10.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="62" selection-start="554" selection-end="554" vertical-scroll-proportion="-8.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_home.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/_home.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="102" selection-start="937" selection-end="937" vertical-scroll-proportion="-12.041667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_resume.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/_resume.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="67" selection-start="2441" selection-end="2441" vertical-scroll-proportion="-10.083333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_cs50.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/_cs50.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="59" selection-start="545" selection-end="545" vertical-scroll-proportion="-8.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_cs30.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/_cs30.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="62" selection-start="549" selection-end="549" vertical-scroll-proportion="-9.208333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/example/index.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="64" selection-start="1334" selection-end="1334" vertical-scroll-proportion="-0.46244133">
               <folding />
             </state>
           </provider>
@@ -147,11 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/pages/_cs10.haml" />
-        <option value="$PROJECT_DIR$/app/views/pages/_cs30.haml" />
-        <option value="$PROJECT_DIR$/app/views/pages/_home.haml" />
-        <option value="$PROJECT_DIR$/app/views/pages/_cs50.haml" />
-        <option value="$PROJECT_DIR$/app/views/pages/_resume.haml" />
         <option value="$PROJECT_DIR$/app/stylesheets/global.sass" />
         <option value="$PROJECT_DIR$/app/stylesheets/partials/_typography.sass" />
         <option value="$PROJECT_DIR$/app/stylesheets/partials/_mixins.sass" />
@@ -159,6 +150,11 @@
         <option value="$PROJECT_DIR$/app/views/pages/index.haml" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/pages/_home.haml" />
+        <option value="$PROJECT_DIR$/app/views/pages/_resume.haml" />
+        <option value="$PROJECT_DIR$/app/views/pages/_cs50.haml" />
+        <option value="$PROJECT_DIR$/app/views/pages/_cs30.haml" />
+        <option value="$PROJECT_DIR$/app/views/pages/_cs10.haml" />
       </list>
     </option>
   </component>
@@ -637,9 +633,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.6604651" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.7875969" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2015504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -679,48 +675,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/pages/_cs50.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="280" selection-end="280" vertical-scroll-proportion="-5.6666665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/_resume.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="51" selection-start="264" selection-end="264" vertical-scroll-proportion="-2.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/_home.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="96" selection-start="920" selection-end="920" vertical-scroll-proportion="-7.7916665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/stylesheets/global.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="753" selection-end="753" vertical-scroll-proportion="-12.083333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_typography.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="38" selection-start="332" selection-end="332" vertical-scroll-proportion="-21.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/stylesheets/partials/_reset.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -770,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/index.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="32" selection-start="1526" selection-end="1526" vertical-scroll-proportion="-12.041667">
@@ -786,7 +733,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="163" selection-end="163" vertical-scroll-proportion="1.0417827">
+        <state line="6" column="28" selection-start="81" selection-end="81" vertical-scroll-proportion="-4.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/_home.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="102" selection-start="937" selection-end="937" vertical-scroll-proportion="-12.041667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/_resume.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="67" selection-start="2441" selection-end="2441" vertical-scroll-proportion="-10.083333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/_cs50.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="59" selection-start="545" selection-end="545" vertical-scroll-proportion="-8.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/_cs30.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="62" selection-start="549" selection-end="549" vertical-scroll-proportion="-9.208333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/index.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/_cs10.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="62" selection-start="554" selection-end="554" vertical-scroll-proportion="-8.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/example/index.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="64" selection-start="1334" selection-end="1334" vertical-scroll-proportion="-0.46244133">
           <folding />
         </state>
       </provider>

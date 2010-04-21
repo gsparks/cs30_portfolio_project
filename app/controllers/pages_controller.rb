@@ -20,6 +20,6 @@ class PagesController < ApplicationController
   end
 
   def cs50
-    
+
   end
 end
