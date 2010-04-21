@@ -1,0 +1,1071 @@
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-04-20 16:09:02) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 49ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (22.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100420231836')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-04-20 16:29:29) [GET]
+
+ActionController::UnknownAction (No action responded to home. Actions: ):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:29:43) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (6.0ms)
+Completed in 24ms (View: 23, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:29:48) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:29:49) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:29:51) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (0.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:29:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:30:36) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:30:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:30:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 16:33:54) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (9.0ms)
+Completed in 39ms (View: 37, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:37:27) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (6.0ms)
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:37:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:37:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 16:38:03) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (6.0ms)
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:38:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/permutation_screenshot.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:38:10) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:38:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/kayak.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:38:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 16:38:11) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (8.0ms)
+Completed in 21ms (View: 20, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 16:38:13) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (4.0ms)
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:38:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/philosophy_paragraph.PNG" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 16:41:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:14:00) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 19:14:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:18:00) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (10.0ms)
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 19:18:13) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-20 19:18:36) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (4.0ms)
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:19:11) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:19:12) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 19:19:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-20 19:19:51) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:19:56) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 19:20:32) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (6.0ms)
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:21:23) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:21:39) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:21:42) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (10.0ms)
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:22:17) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:22:24) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 19:22:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/Desert.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:23:22) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:24:15) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:24:21) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:24:24) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:24:25) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:24:31) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-20 19:24:32) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:24:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:24:46) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:24:48) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 19:24:49) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:25:11) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:25:44) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:25:52) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:25:53) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:26:13) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:26:15) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:27:00) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:27:03) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:33:59) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:23) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:25) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:34) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:36) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:43) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:44) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:55) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:34:57) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:35:17) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:35:18) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:35:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:35:48) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:37:09) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:37:11) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:37:13) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-20 19:37:19) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:37:24) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:37:25) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-20 19:37:26) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (0.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:37:35) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:38:10) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:38:20) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:38:31) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:39:29) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:31) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:33) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:34) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:35) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:47) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:48) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:54) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:56) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:40:56) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:41:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:41:49) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:42:03) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:42:04) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:42:37) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (7.0ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:42:40) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:42:41) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:42:41) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:43:15) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:43:18) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:43:19) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:43:20) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:43:21) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:43:41) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing ExampleController#index (for 127.0.0.1 at 2010-04-20 19:46:01) [GET]
+Rendering template within layouts/application
+Rendering example/index
+Completed in 53ms (View: 52, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-20 19:47:33) [GET]
+
+ActionController::RoutingError (No route matches "/_home" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:47:50) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:48:02) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:48:04) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:49:36) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (4.0ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 19:49:39) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 19:49:40) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-20 19:49:41) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:52:34) [GET]
+
+NameError (undefined local variable or method `layout' for #<PagesController:0x67c2740>):
+  app/controllers/pages_controller.rb:6:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:52:49) [GET]
+
+NameError (undefined local variable or method `layout' for #<PagesController:0x4f17560>):
+  app/controllers/pages_controller.rb:6:in `index'
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:52:54) [GET]
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:53:08) [GET]
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:53:08) [GET]
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:53:15) [GET]
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:53:17) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-20 19:53:17) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-20 20:00:43) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-20 20:00:49) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]

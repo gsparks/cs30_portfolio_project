@@ -1,0 +1,41 @@
+#gridWrapper
+  %h1.page-title CS 30, A continuing Introduction
+
+  .row
+  .columns.first
+    %p
+      The CS 30 class is taught by Professor Kihlstrom and focuses mainly on programming assignments using the Ruby language.  The final project consisted of
+      this web project.
+
+    %p
+      = link_to "<span>Home &raquo;</span>", "http://localhost:3000/pages/_home", :class => 'medium green button'
+      = link_to "<span>My Resume &raquo;</span>", "http://localhost:3000/pages/_resume", :class => 'medium green button'
+
+    %p
+      This is a bit of sample code I've written in Ruby to generate permutations of words or strings.
+
+  .row
+  .columns.first
+    %p
+  .row
+  .columns.first
+
+    %p
+      = image_tag "permutation_screenshot.PNG"
+
+  .row
+  .columns.first
+
+  .row
+  .columns.first
+    %p
+      Given any word or string, this code segment will give its permutation
+
+    %p
+      For example, list_permutations("DOG"), generates...
+
+    %p
+      ["DOG", "DGO", "ODG", "OGD", "GDO", "GOD"]
+
+    %p
+      //= list_permutations("dsf")
