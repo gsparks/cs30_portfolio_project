@@ -1369,3 +1369,922 @@ Migrating to CreatePosts (20100420231836)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-28 16:28:10) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (44.0ms)
+Completed in 6003ms (View: 6000, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+Migrating to CreateComments (20100428231938)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "body" text, "post_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100428231938')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-28 16:55:58) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (6.0ms)
+Completed in 45ms (View: 44, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 16:56:49) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 559ms (View: 301, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-04-28 16:56:53) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 5828ms (View: 5816, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-28 16:57:15) [POST]
+  Parameters: {"authenticity_token"=>"rPSsNc5GrNYoqXS59ejIHsopxMTCRvYpslxlE4lAC9s=", "post"=>{"title"=>"Test", "body"=>"This is a test post!"}, "commit"=>"Create"}
+  [4;35;1mPost Create (2.0ms)[0m   [0mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES('Test', 'This is a test post!', '2010-04-28 23:57:15', '2010-04-28 23:57:15')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 23ms (DB: 2) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 16:57:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 279ms (View: 18, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 16:57:28) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 16:57:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 29ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-28 16:57:55) [POST]
+  Parameters: {"authenticity_token"=>"rPSsNc5GrNYoqXS59ejIHsopxMTCRvYpslxlE4lAC9s=", "comment"=>{"post_id"=>"1", "name"=>"Greg", "email"=>"gsparks@westmont.edu", "body"=>"I like this post"}, "commit"=>"Post Comment"}
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO "comments" ("name", "email", "body", "post_id", "created_at", "updated_at") VALUES('Greg', 'gsparks@westmont.edu', 'I like this post', 1, '2010-04-28 23:57:55', '2010-04-28 23:57:55')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to http://localhost:3000/posts/1
+Completed in 37ms (DB: 2) | 302 Found [http://localhost/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 16:57:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+
+ActionView::TemplateError (undefined method `logged_in?' for #<ActionView::Base:0x4d93520>) on line #6 of app/views/posts/_comment.html.erb:
+3:    <%= simple_format h(comment.body) %>
+4:    <%= link_to 'Destroy Comment', comment,
+5:      :confirm => 'Are you sure?',
+6:      :method => :delete if logged_in? %>
+7:  </div>
+
+    app/views/posts/_comment.html.erb:6
+    haml (2.2.16) [v] lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/views/posts/show.html.erb:44
+    haml (2.2.16) [v] lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.16) [v] lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    app/controllers/posts_controller.rb:19:in `show'
+    haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+    compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (126.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:00:41) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:00:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (2.0ms)
+Completed in 41ms (View: 18, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-28 17:01:01) [POST]
+  Parameters: {"authenticity_token"=>"rPSsNc5GrNYoqXS59ejIHsopxMTCRvYpslxlE4lAC9s=", "comment"=>{"post_id"=>"1", "name"=>"Greg", "email"=>"", "body"=>"comment"}, "commit"=>"Post Comment"}
+  [4;36;1mComment Create (1.0ms)[0m   [0;1mINSERT INTO "comments" ("name", "email", "body", "post_id", "created_at", "updated_at") VALUES('Greg', '', 'comment', 1, '2010-04-29 00:01:01', '2010-04-29 00:01:01')[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to http://localhost:3000/posts/1
+Completed in 200ms (DB: 2) | 302 Found [http://localhost/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:01:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (0.0ms)
+Rendered posts/_comment (1.0ms)
+Completed in 31ms (View: 9, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:01:06) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-04-28 17:02:19) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:02:21) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:02:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (1.0ms)
+Rendered posts/_comment (0.0ms)
+Completed in 65ms (View: 8, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:02:30) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:02:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (1.0ms)
+Rendered posts/_comment (0.0ms)
+Completed in 32ms (View: 9, DB: 2) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-04-28 17:03:16) [GET]
+  Parameters: {"id"=>"2"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and destroy):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:03:46) [GET]
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:03:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (0.0ms)
+Rendered posts/_comment (1.0ms)
+Completed in 64ms (View: 41, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-04-28 17:04:56) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and destroy):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:06:42) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:06:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (1.0ms)
+Rendered posts/_comment (0.0ms)
+Completed in 40ms (View: 18, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:07:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (1.0ms)
+Rendered posts/_comment (0.0ms)
+Completed in 45ms (View: 18, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:08:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (2.0ms)
+Rendered posts/_comment (1.0ms)
+Completed in 48ms (View: 20, DB: 2) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-04-28 17:08:47) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and destroy):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-04-28 17:09:01) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and destroy):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-04-28 17:09:20) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and destroy):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#show (for 127.0.0.1 at 2010-04-28 17:10:55) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and destroy):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:11:05) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:11:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (1.0ms)
+Rendered posts/_comment (0.0ms)
+Completed in 39ms (View: 16, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-28 17:12:52) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#resume (for 127.0.0.1 at 2010-04-28 17:13:19) [GET]
+
+ActionView::MissingTemplate (Missing template pages/resume.erb in view path app/views:vendor/gems/clearance-0.8.7/app/views):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:13:28) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (57.0ms)
+Completed in 69ms (View: 68, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-28 17:15:27) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (33.0ms)
+Completed in 46ms (View: 44, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:15:51) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:19:16) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:19:18) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:19:19) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:19:19) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:27) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (6.0ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:53) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:55) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:56) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:56) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:57) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:19:57) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:20:42) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:20:44) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:21:12) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:21:14) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:21:33) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:21:50) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (56.0ms)
+Completed in 68ms (View: 67, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:09) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:32) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:33) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:44) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:46) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:53) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:22:54) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:23:16) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:23:17) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:23:27) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_resume (for 127.0.0.1 at 2010-04-28 17:23:53) [GET]
+Rendering template within layouts/application
+Rendering pages/_resume
+Rendered pages/_resume (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_resume]
+
+
+Processing PagesController#_cs10 (for 127.0.0.1 at 2010-04-28 17:24:02) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs10
+Rendered pages/_cs10 (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs10]
+
+
+Processing PagesController#_cs50 (for 127.0.0.1 at 2010-04-28 17:24:15) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs50
+Rendered pages/_cs50 (29.0ms)
+Completed in 40ms (View: 39, DB: 0) | 200 OK [http://localhost/pages/_cs50]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:02) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:29) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:30) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (0.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:44) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:46) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:48) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:25:49) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:26:04) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:26:17) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (1.0ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 17:26:19) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (0.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 17:27:34) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (1.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#posts (for 127.0.0.1 at 2010-04-28 17:27:51) [GET]
+
+ActionController::UnknownAction (No action responded to posts. Actions: cs30, cs50, home, index, and resume):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_posts (for 127.0.0.1 at 2010-04-28 17:28:03) [GET]
+
+ActionController::UnknownAction (No action responded to _posts. Actions: cs30, cs50, home, index, and resume):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_posts (for 127.0.0.1 at 2010-04-28 17:28:08) [GET]
+
+ActionController::UnknownAction (No action responded to _posts. Actions: cs30, cs50, home, index, and resume):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_posts (for 127.0.0.1 at 2010-04-28 17:28:08) [GET]
+
+ActionController::UnknownAction (No action responded to _posts. Actions: cs30, cs50, home, index, and resume):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#_posts (for 127.0.0.1 at 2010-04-28 17:28:09) [GET]
+
+ActionController::UnknownAction (No action responded to _posts. Actions: cs30, cs50, home, index, and resume):
+  haml (2.2.16) [v] lib/sass/plugin/rails.rb:19:in `process'
+  compass (0.8.17) [v] lib/compass/app_integration/rails/action_controller.rb:7:in `process_with_compass'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby19/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:28:17) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 17:28:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered posts/_comment (1.0ms)
+Rendered posts/_comment (0.0ms)
+Completed in 30ms (View: 7, DB: 2) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 17:29:10) [GET]
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#destroy (for 127.0.0.1 at 2010-04-28 18:49:03) [DELETE]
+  Parameters: {"authenticity_token"=>"rPSsNc5GrNYoqXS59ejIHsopxMTCRvYpslxlE4lAC9s=", "id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;36;1mComment Destroy (1.0ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+  [4;35;1mComment Destroy (0.0ms)[0m   [0mDELETE FROM "comments" WHERE "id" = 2[0m
+  [4;36;1mPost Destroy (0.0ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 122ms (DB: 1) | 302 Found [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 18:49:03) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-28 18:52:25) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (1.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-28 18:56:44) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Rendered pages/_home (8.0ms)
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 19:01:45) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (5.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PagesController#_home (for 127.0.0.1 at 2010-04-28 19:01:50) [GET]
+Rendering template within layouts/application
+Rendering pages/_home
+Rendered pages/_home (2.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/pages/_home]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 19:12:35) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-04-28 19:12:39) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-04-28 19:12:58) [POST]
+  Parameters: {"authenticity_token"=>"rPSsNc5GrNYoqXS59ejIHsopxMTCRvYpslxlE4lAC9s=", "post"=>{"title"=>"Test", "body"=>"This is a fantastic test post"}, "commit"=>"Create"}
+  [4;35;1mPost Create (2.0ms)[0m   [0mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES('Test', 'This is a fantastic test post', '2010-04-29 02:12:58', '2010-04-29 02:12:58')[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 19:12:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Completed in 39ms (View: 7, DB: 2) | 200 OK [http://localhost/posts/2]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-04-28 19:13:32) [POST]
+  Parameters: {"authenticity_token"=>"rPSsNc5GrNYoqXS59ejIHsopxMTCRvYpslxlE4lAC9s=", "comment"=>{"post_id"=>"2", "name"=>"Greg ", "email"=>"gsparks@westmont.edu", "body"=>"this is a fantastic comment"}, "commit"=>"Post Comment"}
+  [4;36;1mComment Create (1.0ms)[0m   [0;1mINSERT INTO "comments" ("name", "email", "body", "post_id", "created_at", "updated_at") VALUES('Greg ', 'gsparks@westmont.edu', 'this is a fantastic comment', 2, '2010-04-29 02:13:32', '2010-04-29 02:13:32')[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Redirected to http://localhost:3000/posts/2
+Completed in 38ms (DB: 1) | 302 Found [http://localhost/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 19:13:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered posts/_comment (1.0ms)
+Completed in 32ms (View: 8, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-28 19:13:35) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-04-28 19:13:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered posts/_comment (0.0ms)
+Completed in 35ms (View: 10, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PagesController#_cs30 (for 127.0.0.1 at 2010-04-28 19:14:47) [GET]
+Rendering template within layouts/application
+Rendering pages/_cs30
+Rendered pages/_cs30 (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/pages/_cs30]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100420231836)
+Migrating to CreateComments (20100428231938)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
